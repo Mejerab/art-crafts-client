@@ -18,7 +18,7 @@ const Navbar = () => {
     if (dark) {
         body.setAttribute('data-theme', 'dark');
     }
-    else{
+    else {
         body.setAttribute('data-theme', 'light');
     }
     console.log(body);
@@ -61,9 +61,9 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <button onClick={()=>setDark(!dark)} className="mr-5 transition-[.5s]">
+                <button onClick={() => setDark(!dark)} className="mr-5 transition-[.5s]">
                     {
-                        dark ? <GoMoon className="text-4xl rotate-90 text-white" /> : <GoSun className="text-4xl font-bold text-white" />
+                        dark ? <GoMoon className="text-4xl rotate-90" /> : <GoSun className="text-4xl font-bold" />
                     }
                 </button>
                 {
@@ -78,9 +78,11 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            {
-                                user.displayName ? <h4 className="text-base my-3 font-semibold text-black text-center">{user.displayName}</h4> : <h4 className="text-base my-3 text-center font-semibold text-black">{user.email}</h4>
-                            }
+                            <div className="">
+                                {
+                                    user.displayName ? <h4 className="text-gray-400 my-3 font-semibold text-center">{user.displayName}</h4> : <h4 className=" my-3 text-center text-gray-500 font-semibold">{user.email}</h4>
+                                }
+                            </div>
                             <li><button onClick={handleLogout} className="btn">Logout</button></li>
                         </ul>
                     </div> :
