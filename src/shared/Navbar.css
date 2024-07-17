@@ -1,0 +1,7 @@
+.nothing:hover span{
+    rotate: -25deg;
+    color: #95453590;
+}
+.nothing span{
+    transition: all .2s ease-in-out;
+}
