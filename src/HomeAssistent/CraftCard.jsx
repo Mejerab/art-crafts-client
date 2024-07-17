@@ -6,7 +6,7 @@ const CraftCard = ({ data }) => {
         <div className="my-6">
             <div className="card bg-base-100 h-full w-full xl:w-96 shadow-xl border">
                 <figure>
-                    <img className="h-56 xl:64"
+                    <img className="h-56 xl:64 mt-5"
                         src={photo}
                         alt="Shoes" />
                 </figure>

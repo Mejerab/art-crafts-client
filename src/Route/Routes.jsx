@@ -22,7 +22,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: ()=> fetch('http://localhost:5000/crafts')
+                loader: ()=> fetch('https://arts-server-site-kmpyrbqoa-meherabs-projects-19544c30.vercel.app/crafts')
             },
             {
                 path: '/register',
@@ -39,22 +39,22 @@ const router = createBrowserRouter([
             {
                 path: '/craftdetails/:id',
                 element: <PrivateRoute><CraftDetails></CraftDetails></PrivateRoute>,
-                loader: ({params})=> fetch(`http://localhost:5000/crafts/${params.id}`)
+                loader: ({params})=> fetch(`https://arts-server-site-kmpyrbqoa-meherabs-projects-19544c30.vercel.app/crafts/${params.id}`)
             },
             {
                 path: '/allcrafts',
                 element: <PrivateRoute><AllCrafts></AllCrafts></PrivateRoute>,
-                loader:()=> fetch('http://localhost:5000/crafts')
+                loader:()=> fetch('https://arts-server-site-kmpyrbqoa-meherabs-projects-19544c30.vercel.app/crafts')
             },
             {
                 path: '/mycrafts',
                 element: <PrivateRoute><MyCrafts></MyCrafts></PrivateRoute>,
-                loader: ()=> fetch('http://localhost:5000/crafts')
+                loader: ()=> fetch('https://arts-server-site-kmpyrbqoa-meherabs-projects-19544c30.vercel.app/crafts')
             },
             {
                 path: '/updatecraft/:id',
-                element: <UpdateCraft></UpdateCraft>,
-                loader: ({params})=>fetch(`http://localhost:5000/crafts/${params.id}`)
+                element: <PrivateRoute><UpdateCraft></UpdateCraft></PrivateRoute>,
+                loader: ({params})=>fetch(`https://arts-server-site-kmpyrbqoa-meherabs-projects-19544c30.vercel.app/crafts/${params.id}`)
             }
         ]
     },

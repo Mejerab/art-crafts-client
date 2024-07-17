@@ -23,7 +23,7 @@ const CraftCategories = ({ craftData }) => {
                             {
                                landData.length>0 ? landData.map(info => <div key={info._id} className="card bg-base-100 h-full w-full xl:w-96 shadow-xl border">
                                     <figure>
-                                        <img className="h-56 xl:64"
+                                        <img className="h-56 xl:64 mt-5"
                                             src={info.photo}
                                             alt="Shoes" />
                                     </figure>
@@ -59,7 +59,7 @@ const CraftCategories = ({ craftData }) => {
                             {
                                 portraitData.length > 0 ? portraitData.map(info => <div key={info._id} className="card bg-base-100 h-full w-full xl:w-96 shadow-xl border">
                                     <figure>
-                                        <img className="h-56 xl:64"
+                                        <img className="h-56 xl:64 mt-5"
                                             src={info.photo}
                                             alt="Shoes" />
                                     </figure>
@@ -89,7 +89,7 @@ const CraftCategories = ({ craftData }) => {
                             {
                                watercolourData.length>0 ? watercolourData.map(info => <div key={info._id} className="card bg-base-100 h-full w-full xl:w-96 shadow-xl border">
                                     <figure>
-                                        <img className="h-56 xl:64"
+                                        <img className="h-56 xl:64 mt-5"
                                             src={info.photo}
                                             alt="Shoes" />
                                     </figure>
@@ -119,7 +119,7 @@ const CraftCategories = ({ craftData }) => {
                             {
                                oilData.length>0 ? oilData.map(info => <div key={info._id} className="card bg-base-100 h-full w-full xl:w-96 shadow-xl border">
                                     <figure>
-                                        <img className="h-56 xl:64"
+                                        <img className="h-56 xl:64 mt-5"
                                             src={info.photo}
                                             alt="Shoes" />
                                     </figure>
@@ -149,7 +149,7 @@ const CraftCategories = ({ craftData }) => {
                             {
                                charcoalData.length>0 ? charcoalData.map(info => <div key={info._id} className="card bg-base-100 h-full w-full xl:w-96 shadow-xl border">
                                     <figure>
-                                        <img className="h-56 xl:64"
+                                        <img className="h-56 xl:64 mt-5"
                                             src={info.photo}
                                             alt="Shoes" />
                                     </figure>
@@ -180,7 +180,7 @@ const CraftCategories = ({ craftData }) => {
                             {
                                cartoonData.length>0 ? cartoonData.map(info => <div key={info._id} className="card bg-base-100 h-full w-full xl:w-96 shadow-xl border">
                                     <figure>
-                                        <img className="h-56 xl:64"
+                                        <img className="h-56 xl:64 mt-5"
                                             src={info.photo}
                                             alt="Shoes" />
                                     </figure>

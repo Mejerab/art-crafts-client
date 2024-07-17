@@ -55,7 +55,7 @@ const AllCrafts = () => {
                         <div key={data._id}>
                             <div className="card bg-base-100 h-full w-full xl:w-96 shadow-xl border">
                                 <figure>
-                                    <img className="h-56 xl:h-64"
+                                    <img className="h-56 xl:h-64 mt-5"
                                         src={data.photo}
                                         alt="Shoes" />
                                 </figure>

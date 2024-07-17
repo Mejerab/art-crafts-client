@@ -21,7 +21,7 @@ const UpdateCraft = () => {
         const stock = e.target.stock.value;
         const customizer = JSON.stringify(customize);
         const updatedCraft = { artistName, artistEmail, name, photo, description, customizer, time, subcategory, price, stock, rating };
-        fetch(`http://localhost:5000/crafts/${_id}`, {
+        fetch(`https://arts-server-site-kmpyrbqoa-meherabs-projects-19544c30.vercel.app/crafts/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

@@ -23,7 +23,7 @@ const AddItems = () => {
         const customizer = JSON.stringify(customize);
         const craft = { artistName, artistEmail, name, photo, description, customizer, time, subcategory, price, stock, rating };
         if (user.email === artistEmail) {
-            fetch('http://localhost:5000/crafts', {
+            fetch('https://arts-server-site-kmpyrbqoa-meherabs-projects-19544c30.vercel.app/crafts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
