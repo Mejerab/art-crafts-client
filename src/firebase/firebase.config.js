@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBjE0TMPfXMz51L9nzgKz3pMvURWjr5bBw",
-  authDomain: "craft-mania-aa8ed.firebaseapp.com",
-  projectId: "craft-mania-aa8ed",
-  storageBucket: "craft-mania-aa8ed.appspot.com",
-  messagingSenderId: "408197787117",
-  appId: "1:408197787117:web:5f7fe0489cd8a155170be4"
+  apiKey: import.meta.env.APIKEY,
+  authDomain: import.meta.env.AUTHDOMAIN,
+  projectId: import.meta.env.PROJECTID,
+  storageBucket: import.meta.env.STORAGEBUCKET,
+  messagingSenderId: import.meta.env.MESSAGINGSENDERID,
+  appId: import.meta.env.APPID,
 };
 
 // Initialize Firebase
