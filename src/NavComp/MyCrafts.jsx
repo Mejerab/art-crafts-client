@@ -25,7 +25,7 @@ const MyCrafts = () => {
     }
     return (
         <div>
-            <h3 className="text-center text-3xl font-bold my-6">My Craft Items</h3>
+            <h3 className="text-center text-3xl text-[#954535cc] font-bold my-12">My Craft Items</h3>
             <div className="w-full flex justify-end">
                 <details className="dropdown dropdown-end mr-12">
                     <summary onClick={() => setItUp(!itUp)} className="btn bg-[#95453590] text-white px-7 m-1">Filter

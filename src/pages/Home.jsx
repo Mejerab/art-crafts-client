@@ -49,10 +49,9 @@ const Home = () => {
                     </SwiperSlide>
                 </Swiper>
             </div>
-            <CraftCategories craftData={craftData}></CraftCategories>
 
             <div className="my-12">
-                <h3 className="text-3xl font-bold text-center mb-4">Art & Crafts</h3>
+                <h3 className="text-3xl font-bold text-[#954535cc] text-center mb-4">Art & Crafts</h3>
                 <div className="flex justify-end mr-10">
                     <Link to='/addcrafts' className="btn px-7 bg-[#95453590] text-white">Add your Crafts <IoIosAdd className="text-3xl p-[2px] rounded-full text-[#95453590] bg-white" /></Link>
                 </div>
@@ -68,6 +67,7 @@ const Home = () => {
                     </div>
                 }
             </div>
+            <CraftCategories craftData={craftData}></CraftCategories>
         </>
     );
 };

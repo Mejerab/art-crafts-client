@@ -54,7 +54,7 @@ const Register = () => {
     }
     return (
         <div>
-            <h3 className="text-3xl text-center font-bold mt-5 pb-2">Register</h3>
+            <h3 className="text-3xl text-center font-bold text-[#954535cc] mt-5 pb-2">Register</h3>
             <div className="border w-4/6 xl:w-[35%] mx-auto py-8 my-8 rounded-2xl">
                 <form onSubmit={handleSubmit} className="mx-auto w-3/4">
                     <h4>Name</h4>

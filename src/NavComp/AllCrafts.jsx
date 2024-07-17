@@ -28,7 +28,7 @@ const AllCrafts = () => {
     return (
         <>
             <div className="my-12">
-                <h3 className="text-3xl font-bold text-center">All arts & crafts</h3>
+                <h3 className="text-3xl text-[#954535cc] font-bold text-center">All arts & crafts</h3>
                 <div className="w-full flex justify-end">
                     <details className="dropdown dropdown-end mr-11">
                         <summary onClick={() => setItUp(!itUp)} className="btn bg-[#95453590] text-white px-7 m-1">Filter

@@ -49,7 +49,7 @@ const AddItems = () => {
     }
     return (
         <div className="my-8">
-            <h3 className="text-center text-3xl font-semibold my-12">Add your craft</h3>
+            <h3 className="text-center text-3xl font-semibold text-[#954535cc] my-12">Add your craft</h3>
             <div className="border mx-12 rounded-2xl">
                 <h5 className="text-xl font-medium pt-4 text-center">About the artist</h5>
                 <p className="text-gray-400  text-center text-xs">Fill the input boxes with the artists information</p>
@@ -102,7 +102,7 @@ const AddItems = () => {
                     <div className="flex justify-between mx-2 lg:mx-24 xl:mx-44 items-center">
                         <div className="flex items-center">
                             <span className="font-medium">Craft Processing time: </span>
-                            <input type="text" className="text-sm my-6 sm:-ml- sm:w-[40%] input input-bordered" name="time" placeholder="Craft processing time" required />
+                            <input type="text" className="text-sm my-6 sm:-ml- sm:w-[40%] input input-bordered" name="time" placeholder="Processing time" required />
                         </div>
                         <div className="flex items-center">
                             <span className="font-medium">Craft Customization: </span>
