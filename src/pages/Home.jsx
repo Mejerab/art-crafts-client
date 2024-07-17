@@ -49,7 +49,7 @@ const Home = () => {
                     </SwiperSlide>
                 </Swiper>
             </div>
-            <CraftCategories></CraftCategories>
+            <CraftCategories craftData={craftData}></CraftCategories>
 
             <div className="my-12">
                 <h3 className="text-3xl font-bold text-center mb-4">Art & Crafts</h3>
