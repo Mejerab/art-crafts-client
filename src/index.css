@@ -10,11 +10,12 @@
 :root {
     --body_background: black;
     --body_color: white;
+    --list-color: black;
 }
 
 [data-theme="light"] {
     --body_background: white;
-    --body_color: white;
+    --body_color: black;
 }
 
 [data-theme="dark"] {

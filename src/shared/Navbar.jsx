@@ -21,7 +21,6 @@ const Navbar = () => {
     else {
         body.setAttribute('data-theme', 'light');
     }
-    console.log(body);
     const handleLogout = () => {
         logOut()
             .then(() => {
@@ -30,13 +29,13 @@ const Navbar = () => {
             .catch(error => console.error(error))
     }
     return (
-        <div id="navbar" className="navbar bg-[#95453590] px-8 text-white z-50">
+        <div id="navbar" className="navbar bg-[#95453590] px-8  z-50">
             <div className="navbar-start">
                 <div className="dropdown z-30">
                     <div tabIndex={0} role="button" className="btn btn-ghost xl:hidden">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
+                            className="h-5 w-5 text-white"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor">
@@ -49,13 +48,13 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu text-black menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow border">
                         {links}
                     </ul>
                 </div>
                 <Link to='/' className="btn text-white bg-transparent border-none hover:bg-transparent text-2xl nothing"><span><TbBrandCraft className="text-3xl -rotate-90" /> </span>Craft Mania</Link>
             </div>
-            <div className="navbar-center hidden xl:flex">
+            <div className="navbar-center text-white hidden xl:flex">
                 <ul className="menu menu-horizontal px-1">
                     {links}
                 </ul>
@@ -63,7 +62,7 @@ const Navbar = () => {
             <div className="navbar-end">
                 <button onClick={() => setDark(!dark)} className="mr-5 transition-[.5s]">
                     {
-                        dark ? <GoMoon className="text-4xl rotate-90" /> : <GoSun className="text-4xl font-bold" />
+                        dark ? <GoMoon className="text-4xl text-white rotate-90" /> : <GoSun className="text-4xl font-bold text-white" />
                     }
                 </button>
                 {
@@ -77,10 +76,10 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow border">
                             <div className="">
                                 {
-                                    user.displayName ? <h4 className="text-gray-400 my-3 font-semibold text-center">{user.displayName}</h4> : <h4 className=" my-3 text-center text-gray-500 font-semibold">{user.email}</h4>
+                                    user.displayName ? <h4 className="my-3 font-semibold text-center">{user.displayName}</h4> : <h4 className=" my-3 text-center font-semibold">{user.email}</h4>
                                 }
                             </div>
                             <li><button onClick={handleLogout} className="btn">Logout</button></li>
