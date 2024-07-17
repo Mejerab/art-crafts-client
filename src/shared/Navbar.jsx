@@ -7,7 +7,7 @@ import { GoMoon, GoSun } from "react-icons/go";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-    const [dark, setDark] = useState(false);
+    const [dark, setDark] = useState(null);
     const links = <>
         <li className="font-medium"><Link to='/'>Home</Link></li>
         <li className="font-medium"><Link to='/allcrafts'>All Art & craft Items</Link></li>

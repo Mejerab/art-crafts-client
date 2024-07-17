@@ -16,7 +16,7 @@ const CraftDetails = () => {
     return (
         <div className="border my-6 mx-10 flex items-center py-12 rounded-2xl">
             <div className="w-1/2">
-                <img className="w-1/2 sm:h-[200px] sm:w-3/4 mx-auto" src={photo} alt="" />
+                <img className=" xl:w-3/4 xl:h-3/4 sm:h-[200px] sm:w-3/4 mx-auto" src={photo} alt="" />
             </div>
             <div className="ml-5 w-1/2">
                 <h4 className="font-semibold mb-2 text-lg text-[#95453590] underline">Craft</h4>
