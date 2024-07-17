@@ -1,17 +1,27 @@
 import { TbBrandCraft } from "react-icons/tb";
 import './Navbar.css'
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import { GoMoon, GoSun } from "react-icons/go";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
+    const [dark, setDark] = useState(false);
     const links = <>
         <li className="font-medium"><Link to='/'>Home</Link></li>
         <li className="font-medium"><Link to='/allcrafts'>All Art & craft Items</Link></li>
         <li className="font-medium"><Link to='/addcrafts'>Add Craft Item</Link></li>
         <li className="font-medium"><Link to='/mycrafts'>My Art&Craft List</Link></li>
     </>;
+    const body = document.querySelector('body');
+    if (dark) {
+        body.setAttribute('data-theme', 'dark');
+    }
+    else{
+        body.setAttribute('data-theme', 'light');
+    }
+    console.log(body);
     const handleLogout = () => {
         logOut()
             .then(() => {
@@ -50,7 +60,12 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end mr-2">
+            <div className="navbar-end">
+                <button onClick={()=>setDark(!dark)} className="mr-5 transition-[.5s]">
+                    {
+                        dark ? <GoMoon className="text-4xl rotate-90 text-white" /> : <GoSun className="text-4xl font-bold text-white" />
+                    }
+                </button>
                 {
                     user ? <div className="dropdown dropdown-end z-20">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">

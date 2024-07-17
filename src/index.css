@@ -6,3 +6,23 @@
 .font {
     font-family: "Playwrite HR Lijeva", cursive;
 }
+
+:root {
+    --body_background: black;
+    --body_color: white;
+}
+
+[data-theme="light"] {
+    --body_background: white;
+    --body_color: white;
+}
+
+[data-theme="dark"] {
+    --body_background: black;
+    --body_color: white;
+}
+
+body {
+    color: var(--body_color);
+    background: var(--body_background);
+}

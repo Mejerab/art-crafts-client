@@ -13,7 +13,6 @@ import CraftCategories from '../HomeAssistent/CraftCategories';
 import { IoIosAdd } from 'react-icons/io';
 import { Link, useLoaderData } from 'react-router-dom';
 import CraftCard from '../HomeAssistent/CraftCard';
-import { Fade } from 'react-awesome-reveal';
 const Home = () => {
     const craftData = useLoaderData();
     return (
