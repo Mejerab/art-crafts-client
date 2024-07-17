@@ -13,6 +13,7 @@ import CraftCategories from '../HomeAssistent/CraftCategories';
 import { IoIosAdd } from 'react-icons/io';
 import { Link, useLoaderData } from 'react-router-dom';
 import CraftCard from '../HomeAssistent/CraftCard';
+import { Fade } from 'react-awesome-reveal';
 const Home = () => {
     const craftData = useLoaderData();
     return (
@@ -58,14 +59,14 @@ const Home = () => {
                 </div>
                 <div className=' grid grid-cols-2 xl:grid-cols-3 mx-10 my-4 gap-x-14'>
                     {
-                        craftData.slice(0, 6).map(data=> <CraftCard key={data._id} data={data}></CraftCard>)
+                        craftData.slice(0, 6).map(data => <CraftCard key={data._id} data={data}></CraftCard>)
                     }
                 </div>
                 {
                     craftData.length > 6 &&
-                        <div className='flex justify-center my-4'>
-                            <Link to='/allcrafts' className='btn bg-[#95453590] px-7 text-white'>Show more</Link>
-                        </div>
+                    <div className='flex justify-center my-4'>
+                        <Link to='/allcrafts' className='btn bg-[#95453590] px-7 text-white'>Show more</Link>
+                    </div>
                 }
             </div>
         </>
