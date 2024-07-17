@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import { FaAngleDown } from "react-icons/fa";
 import { Link, useLoaderData, useLocation } from "react-router-dom";
 
@@ -27,6 +28,9 @@ const AllCrafts = () => {
     }
     return (
         <>
+        <Helmet>
+            <title>Craft Mania || All Crafts</title>
+        </Helmet>
             <div className="my-12">
                 <h3 className="text-3xl text-[#954535cc] font-bold text-center">All arts & crafts</h3>
                 <div className="w-full flex justify-end">

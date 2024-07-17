@@ -3,6 +3,7 @@ import { FaAngleDown } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import MyCraftCard from "./MyCraftCard";
+import { Helmet } from "react-helmet";
 
 const MyCrafts = () => {
     const { user } = useContext(AuthContext);
@@ -25,6 +26,9 @@ const MyCrafts = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Craft Mania || My Crafts</title>
+            </Helmet>
             <h3 className="text-center text-3xl text-[#954535cc] font-bold my-12">My Craft Items</h3>
             <div className="w-full flex justify-end">
                 <details className="dropdown dropdown-end mr-12">

@@ -20,6 +20,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 import { Fade } from 'react-awesome-reveal';
 import { FaApple, FaFacebookSquare, FaGoogle, FaMicrosoft } from 'react-icons/fa';
 import Marquee from 'react-fast-marquee';
+import { Helmet } from 'react-helmet';
 const Home = () => {
     const navigate = useNavigate();
     const craftData = useLoaderData();
@@ -41,6 +42,9 @@ const Home = () => {
     }
     return (
         <>
+        <Helmet>
+            <title>Craft Mania</title>
+        </Helmet>
             <div className='h-fit mb-12'>
                 <Swiper
                     slidesPerView={1}

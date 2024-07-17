@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { FaStar } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -15,6 +16,9 @@ const CraftDetails = () => {
     const { artistName, artistEmail, name, photo, customizer, description, price, rating, subcategory, time, stock } = data;
     return (
         <div className="border my-6 mx-10 flex items-center py-12 rounded-2xl">
+            <Helmet>
+                <title>Craft Mania || Craft Details</title>
+            </Helmet>
             <div className="w-1/2">
                 <img className=" xl:w-3/4 xl:h-3/4 sm:h-[200px] sm:w-3/4 mx-auto" src={photo} alt="" />
             </div>

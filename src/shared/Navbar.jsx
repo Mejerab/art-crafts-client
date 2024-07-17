@@ -9,10 +9,10 @@ const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
     const [dark, setDark] = useState(null);
     const links = <>
-        <li className="font-medium"><Link to='/'>Home</Link></li>
-        <li className="font-medium"><Link to='/allcrafts'>All Art & craft Items</Link></li>
-        <li className="font-medium"><Link to='/addcrafts'>Add Craft Item</Link></li>
-        <li className="font-medium"><Link to='/mycrafts'>My Art&Craft List</Link></li>
+        <li className="font-medium mr-2"><Link to='/'>Home</Link></li>
+        <li className="font-medium mr-2"><Link to='/allcrafts'>All Art & craft Items</Link></li>
+        <li className="font-medium mr-2"><Link to='/addcrafts'>Add Craft Item</Link></li>
+        <li className="font-medium mr-2"><Link to='/mycrafts'>My Art&Craft List</Link></li>
     </>;
     const body = document.querySelector('body');
     if (dark) {

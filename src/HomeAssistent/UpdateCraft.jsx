@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -42,6 +43,9 @@ const UpdateCraft = () => {
     }
     return (
         <div className="my-8">
+            <Helmet>
+                <title>Craft Mania || Update Craft</title>
+            </Helmet>
             <h3 className="text-center text-3xl text-[#954535cc] font-semibold my-12">Update your craft</h3>
             <div className="border mx-12 rounded-2xl">
                 <h5 className="text-xl font-medium pt-4 text-center">About the artist</h5>
@@ -118,7 +122,7 @@ const UpdateCraft = () => {
                         </div>
                     </div>
                     <div className="mx-2 lg:mx-44 pb-5">
-                        <button className="btn text-white bg-[#95453590] w-full">Add craft</button>
+                        <button className="btn text-white bg-[#95453590] w-full">Update craft</button>
                     </div>
                 </form>
             </div>
