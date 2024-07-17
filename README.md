@@ -1,5 +1,5 @@
 # Craft Mania
-# link: [text](https://craft-mania-aa8ed.web.app/)
+# link: https://craft-mania-aa8ed.web.app/
 
 * Explore Diverse Art Forms: Discover a wide variety of art and craft projects, from painting and drawing to knitting and pottery.
 
