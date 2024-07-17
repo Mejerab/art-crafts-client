@@ -17,6 +17,7 @@ import { Tooltip } from 'react-tooltip';
 import { toast, ToastContainer } from 'react-toastify';
 import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
+import { Fade } from 'react-awesome-reveal';
 const Home = () => {
     const navigate = useNavigate();
     const craftData = useLoaderData();
@@ -97,10 +98,12 @@ const Home = () => {
                 <h3 className="text-3xl font-bold text-[#954535cc] text-center my-6">Our Services</h3>
                 <div className='border mx-12 rounded-2xl my-4 flex'>
                     <div className='w-1/2 p-4 border-r'>
-                        <h5 className='font-semibold'>Welcome to Our Services Blog!</h5>
-                        <p>At Craft Mania, we are committed to providing top-notch services tailored to meet your needs. Our blog is your go-to resource for insights, tips, and updates about the services we offer. Whether you are looking for industry trends, expert advice, or a deeper understanding of our service offerings, you have come to the right place.</p>
-                        <h5 className='font-semibold mt-4 mb-2'>Why Choose Us?</h5>
-                        <p>Learn more about what sets us apart in the industry. Our blog highlights our unique approach, the value we bring to our clients, and the continuous improvements we make to ensure top-quality service delivery.</p>
+                        <Fade cascade>
+                            <h5 className='font-semibold'>Welcome to Our Services Blog!</h5>
+                            <p>At Craft Mania, we are committed to providing top-notch services tailored to meet your needs. Our blog is your go-to resource for insights, tips, and updates about the services we offer. Whether you are looking for industry trends, expert advice, or a deeper understanding of our service offerings, you have come to the right place.</p>
+                            <h5 className='font-semibold mt-4 mb-2'>Why Choose Us?</h5>
+                            <p>Learn more about what sets us apart in the industry. Our blog highlights our unique approach, the value we bring to our clients, and the continuous improvements we make to ensure top-quality service delivery.</p>
+                        </Fade>
                     </div>
                     <div className='w-1/2 p-4'>
                         <h4 className='text-center font-semibold'>Send message</h4>
