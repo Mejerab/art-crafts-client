@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 const CraftCategories = ({ craftData }) => {
-    console.log(craftData);
     const landData = craftData.filter(data => data.subcategory === 'Landscape');
     const portraitData = craftData.filter(data => data.subcategory === 'Portrait');
     const watercolourData = craftData.filter(data => data.subcategory === 'Watercolour');
@@ -11,7 +10,7 @@ const CraftCategories = ({ craftData }) => {
     const cartoonData = craftData.filter(data => data.subcategory === 'Cartoon');
     return (
         <div>
-            <h3 className='font-bold text-3xl text-center mt-16 mb-8'>Craft Categories</h3>
+            <h3 className='font-bold text-3xl text-[#954535cc] text-center mt-16 mb-8'>Craft Categories</h3>
             <div className="my-6 mx-10">
                 <div role="tablist" className="tabs tabs-lifted">
                     <input type="radio" defaultChecked name="my_tabs_2" role="tab" className="tab" aria-label="Landscape Painting" />
@@ -20,7 +19,7 @@ const CraftCategories = ({ craftData }) => {
                             <li className="step ">Mountain Canvana</li>
                             <li className="step ">Forest related</li>
                         </ul>
-                        <div className="grid grid-cols-2 xl:grid-cols-3 mt-4">
+                        <div className="grid gap-x-14 mx-4 grid-cols-2 xl:grid-cols-3 mt-4">
                             {
                                landData.length>0 ? landData.map(info => <div key={info._id} className="card bg-base-100 h-full w-full xl:w-96 shadow-xl border">
                                     <figure>
@@ -56,7 +55,7 @@ const CraftCategories = ({ craftData }) => {
                             <li className="step ">Ink Outline Portrait</li>
                             <li className="step ">Acrylic Portrait Canvas</li>
                         </ul>
-                        <div className="grid grid-cols-2 xl:grid-cols-3 mt-4">
+                        <div className="grid gap-x-14 mx-4 grid-cols-2 xl:grid-cols-3 mt-4">
                             {
                                 portraitData.length > 0 ? portraitData.map(info => <div key={info._id} className="card bg-base-100 h-full w-full xl:w-96 shadow-xl border">
                                     <figure>
@@ -86,7 +85,7 @@ const CraftCategories = ({ craftData }) => {
                             <li className="step ">Floral Watercolor Art</li>
                             <li className="step ">Animal Watercolor Portrait</li>
                         </ul>
-                        <div className="grid grid-cols-2 xl:grid-cols-3 mt-4">
+                        <div className="grid gap-x-14 mx-4 grid-cols-2 xl:grid-cols-3 mt-4">
                             {
                                watercolourData.length>0 ? watercolourData.map(info => <div key={info._id} className="card bg-base-100 h-full w-full xl:w-96 shadow-xl border">
                                     <figure>
@@ -116,7 +115,7 @@ const CraftCategories = ({ craftData }) => {
                             <li className="step ">Realistic Oil Portrait</li>
                             <li className="step ">Abstract Oil Painting</li>
                         </ul>
-                        <div className="grid grid-cols-2 xl:grid-cols-3 mt-4">
+                        <div className="grid gap-x-14 mx-4 grid-cols-2 xl:grid-cols-3 mt-4">
                             {
                                oilData.length>0 ? oilData.map(info => <div key={info._id} className="card bg-base-100 h-full w-full xl:w-96 shadow-xl border">
                                     <figure>
@@ -146,7 +145,7 @@ const CraftCategories = ({ craftData }) => {
                             <li className="step ">Figure Charcoal Sketch</li>
                             <li className="step ">Architectural Charcoal Drawing</li>
                         </ul>
-                        <div className="grid grid-cols-2 xl:grid-cols-3 mt-4">
+                        <div className="grid gap-x-14 mx-4 grid-cols-2 xl:grid-cols-3 mt-4">
                             {
                                charcoalData.length>0 ? charcoalData.map(info => <div key={info._id} className="card bg-base-100 h-full w-full xl:w-96 shadow-xl border">
                                     <figure>
@@ -177,7 +176,7 @@ const CraftCategories = ({ craftData }) => {
                             <li className="step ">Superhero Cartoon Design</li>
                             <li className="step ">Batman Cartoon Design</li>
                         </ul>
-                        <div className="grid grid-cols-2 xl:grid-cols-3 mt-4">
+                        <div className="grid gap-x-14 mx-4 grid-cols-2 xl:grid-cols-3 mt-4">
                             {
                                cartoonData.length>0 ? cartoonData.map(info => <div key={info._id} className="card bg-base-100 h-full w-full xl:w-96 shadow-xl border">
                                     <figure>
