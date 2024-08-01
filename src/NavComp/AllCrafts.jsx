@@ -8,7 +8,7 @@ const AllCrafts = () => {
     const loaderData = useLoaderData();
     const [allData, setAllData] = useState(loaderData);
     const location = useLocation();
-    console.log(location);
+    // console.log(location);
 
     const handleFilter = (data) => {
         if (data === 'all') {
@@ -17,12 +17,12 @@ const AllCrafts = () => {
         }
         else if (data === 'yes') {
             const able = loaderData.filter(data => data.customizer === 'true');
-            console.log(able);
+            console.log('able');
             setAllData(able)
         }
         else if (data === 'no') {
             const unable = loaderData.filter(data => data.customizer === 'false');
-            console.log(unable);
+            console.log('unable');
             setAllData(unable)
         }
     }

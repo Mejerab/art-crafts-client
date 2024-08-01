@@ -12,7 +12,7 @@ const LogIn = () => {
     const [show, setShow] = useState(false);
     const { logIn, googleLogin, githubLogin } = useContext(AuthContext);
     const location = useLocation();
-    console.log(location);
+    // console.log(location);
     const handleSubmit = e => {
         e.preventDefault();
         const email = e.target.email.value;
@@ -23,7 +23,7 @@ const LogIn = () => {
         else {
             logIn(email, password)
                 .then(result => {
-                    console.log(result.user);
+                    // console.log(result.user);
                     Swal.fire({
                         title: 'Success!',
                         text: 'Do you want to continue',
@@ -46,7 +46,7 @@ const LogIn = () => {
     const handleGoogle = () => {
         googleLogin()
             .then(result => {
-                console.log(result.user);
+                // console.log(result.user);
                 Swal.fire({
                     title: 'Success!',
                     text: 'Do you want to continue',
@@ -65,13 +65,26 @@ const LogIn = () => {
                 })
             })
     }
-    const handleFacebook = () => {
+    const handleGithub = () => {
         githubLogin()
             .then(result => {
-                console.log(result.user);
+                // console.log(result.user);
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Do you want to continue',
+                    icon: 'success',
+                    confirmButtonText: 'Return'
+                })
                 navigate(location?.state ? location.state : '/');
             })
-            .catch(error => console.error(error))
+            .catch(error => {console.error(error)
+                Swal.fire({
+                    title: 'error!',
+                    text: "We faced an error",
+                    icon: 'error',
+                    confirmButtonText: 'Try Again'
+                })
+            })
     }
     return (
         <div>
@@ -100,7 +113,8 @@ const LogIn = () => {
                 </div>
                 <div className="font-sans flex flex-col mx-16 gap-y-4">
                     <button onClick={handleGoogle} className="btn"><FcGoogle className="text-2xl"></FcGoogle>Continue with Google</button>
-                    <button onClick={handleFacebook} className="btn"><FaGithub className="text-2xl" />Continue with Github</button>
+                    <button onClick={handleGithub} className="btn"><FaGithub 
+                    className="text-2xl" />Continue with Github</button>
                 </div>
             </div>
             <ToastContainer></ToastContainer>

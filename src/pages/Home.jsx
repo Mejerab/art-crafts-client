@@ -27,13 +27,9 @@ const Home = () => {
     const { user } = useContext(AuthContext);
     const handleMessage = e => {
         e.preventDefault();
-        const name = e.target.name;
-        const email = e.target.email;
         const message = e.target.message;
         if (user) {
             toast.success('Message sent successfully');
-            name.value = '';
-            email.value = '';
             message.value = '';
         }
         else {

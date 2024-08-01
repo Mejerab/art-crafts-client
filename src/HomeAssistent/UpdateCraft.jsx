@@ -21,7 +21,7 @@ const UpdateCraft = () => {
         const stock = e.target.stock.value;
         const customizer = JSON.stringify(customize);
         const updatedCraft = { artistName, artistEmail, name, photo, description, customizer, time, subcategory, price, stock, rating };
-        fetch(`https://arts-server-site-kmpyrbqoa-meherabs-projects-19544c30.vercel.app/crafts/${_id}`, {
+        fetch(`https://arts-server-site.vercel.app/crafts/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -30,7 +30,7 @@ const UpdateCraft = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Success',

@@ -27,7 +27,7 @@ const Register = () => {
         else {
             createWithEmail(email, password)
                 .then(result => {
-                    console.log(result.user);
+                    // console.log(result.user);
                     Swal.fire({
                         title: 'Success!',
                         text: 'Do you want to continue',

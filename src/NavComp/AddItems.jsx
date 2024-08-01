@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 
 const AddItems = () => {
     const { user } = useContext(AuthContext);
-    console.log(user);
+    // console.log(user);
     const [customize, setCustomize] = useState(false);
     const handleSubmit = e => {
         e.preventDefault();
@@ -23,7 +23,7 @@ const AddItems = () => {
         const customizer = JSON.stringify(customize);
         const craft = { artistName, artistEmail, name, photo, description, customizer, time, subcategory, price, stock, rating };
         if (user.email === artistEmail) {
-            fetch('https://arts-server-site-kmpyrbqoa-meherabs-projects-19544c30.vercel.app/crafts', {
+            fetch('https://arts-server-site.vercel.app/crafts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -32,7 +32,7 @@ const AddItems = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                    // console.log(data);
                     if (data.insertedId) {
                         Swal.fire({
                             title: 'Craft Added',

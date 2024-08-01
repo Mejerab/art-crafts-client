@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 const PrivateRoute = ({ children }) => {
     const { user, loader } = useContext(AuthContext);
     const location = useLocation();
-    console.log(location.pathname);
+    // console.log(location.pathname);
     if (user) {
         return children;
     }

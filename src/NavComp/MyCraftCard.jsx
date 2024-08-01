@@ -16,12 +16,12 @@ const MyCraftCard = ({ data, allData, setAllData }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://arts-server-site-kmpyrbqoa-meherabs-projects-19544c30.vercel.app/crafts/${_id}`, {
+                fetch(`https://arts-server-site.vercel.app/crafts/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data);
+                        // console.log(data);
                         if (data.deleteCount > 0) {
                             Swal.fire({
                                 title: "Deleted!",
@@ -50,7 +50,7 @@ const MyCraftCard = ({ data, allData, setAllData }) => {
                     <h4><span className="font-semibold">Stock:</span>{stock}</h4>
                 </div>
                 <div className="flex justify-end items-end mr-5 mt-5">
-                    <Link to={`/craftdetails/${_id}`} className="btn border-2 bg-white border-[#95453590] mr-2">View Details</Link>
+                    <Link to={`/craftdetails/${_id}`} className="btn border-2 bg-white border-[#95453590] hover:text-gray-400 text-gray-800 mr-2">View Details</Link>
                     <Link to={`/updateCraft/${_id}`} className="btn bg-[#95453590] text-white mr-2">Update Details</Link>
                     <button onClick={() => handleDelete(_id)} className="btn bg-red-600 text-white ml-2">Delete</button>
                 </div>
